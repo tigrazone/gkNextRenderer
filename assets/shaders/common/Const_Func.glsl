@@ -1,7 +1,7 @@
 #ifndef Const_Func
 
-#define to_world(v, t, b, n) (mat3((t), (b), (n)) * (v))
-#define to_local(v, T, B, N) ( (v) * mat3((T), (B), (N)) )
+#define to_world(v, tbn) ( (tbn) * (v) )
+#define to_local(v, TBN) ( (v) * (TBN) )
 
 #define M_PI			3.14159265358979323846	// pi
 #define M_TWO_PI		6.283185307179586476925	// 2*pi
@@ -91,12 +91,12 @@ vec3 AlignWithNormal(vec3 ray, vec3 normal)
 {
     vec3 T, B;
     ONB(normal, T, B);
-    return to_world(ray, T, B, normal);
+    return to_world(ray, mat3(T, B, normal));
 }
 
 vec3 AlignWithNormal(vec3 ray, mat3 TBN)
 {
-    return to_world(ray, TBN[0], TBN[1], TBN[2]);
+    return to_world(ray, TBN);
 }
 #define Const_Func
 #endif

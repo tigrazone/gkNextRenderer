@@ -32,10 +32,10 @@ vec3 ggxSampling(inout uvec4 RandomSeed, float roughness, vec3 normal, mat3 TBN)
 {
 vec3 wm_ = ggx_sample_vndf(
 	vec2(roughness * roughness),
-	to_local(normal, TBN[0], TBN[1], TBN[2]),
+	to_local(normal, TBN),
 	RandomFloat2(RandomSeed)
 );
-return to_world(wm_, TBN[0], TBN[1], TBN[2]);
+return to_world(wm_, TBN);
 }
 
 //prev variant for HybridDeffered renderer
@@ -45,10 +45,10 @@ vec3 tangent, bitangent;
 ONB(normal, tangent, bitangent);
 vec3 wm_ = ggx_sample_vndf(
 	vec2(roughness * roughness),
-	to_local(normal, tangent, bitangent, normal),
+	to_local(normal, mat3(tangent, bitangent, normal)),
 	RandomFloat2(RandomSeed)
 );
-return to_world(wm_, tangent, bitangent, normal);
+return to_world(wm_, mat3(tangent, bitangent, normal));
 }
 #else
 vec3 ggxSampling(inout uvec4 RandomSeed, float roughness, vec3 normal, mat3 TBN)
