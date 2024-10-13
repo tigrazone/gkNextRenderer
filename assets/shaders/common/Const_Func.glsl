@@ -93,5 +93,10 @@ vec3 AlignWithNormal(vec3 ray, vec3 normal)
     ONB(normal, T, B);
     return to_world(ray, T, B, normal);
 }
+
+vec3 AlignWithNormal(vec3 ray, mat3 TBN)
+{
+    return to_world(ray, TBN[0], TBN[1], TBN[2]);
+}
 #define Const_Func
 #endif

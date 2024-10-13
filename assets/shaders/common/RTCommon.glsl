@@ -23,13 +23,18 @@ void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float Ra
 	const vec3 barycentrics = vec3(1.0 - TwoBaryCoords.x - TwoBaryCoords.y, TwoBaryCoords.x, TwoBaryCoords.y);
 	const vec3 normal = normalize((to_world(barycentrics, v0.Normal, v1.Normal, v2.Normal) * WorldToObject).xyz);
 	const vec2 texCoord = Mix(v0.TexCoord, v1.TexCoord, v2.TexCoord, barycentrics);
-	
-    int lightIdx = int(floor(RandomFloat(Ray.RandomSeed) * .99999 * Camera.LightCount));
-    Ray.HitPos = HitPos; 
+
+	vec3 tangent, bitangent;
+	ONB(normal, tangent, bitangent);
+	mat3 TBN = mat3(tangent, bitangent, normal);
+
+	int lightIdx = int(floor(RandomFloat(Ray.RandomSeed) * .99999 * Camera.LightCount));
+	Ray.HitPos = HitPos;
+
 	Ray.primitiveId = (InstanceID + 1) << 16 | v0.MaterialIndex;
 	Ray.BounceCount++;
 	Ray.Exit = false;
-	Scatter(Ray, material, Lights[lightIdx], RayDirection, normal, texCoord, RayDist, v0.MaterialIndex);
+	Scatter(Ray, material, Lights[lightIdx], RayDirection, TBN, texCoord, RayDist, v0.MaterialIndex);
 }
 
 void ProcessMiss(const vec3 RayDirection)

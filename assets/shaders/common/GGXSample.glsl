@@ -28,6 +28,17 @@ vec3 m_std = wi + o_std;
 return normalize(vec3(m_std.xy * alpha, m_std.z));
 }
 
+vec3 ggxSampling(inout uvec4 RandomSeed, float roughness, vec3 normal, mat3 TBN)
+{
+vec3 wm_ = ggx_sample_vndf(
+	vec2(roughness * roughness),
+	to_local(normal, TBN[0], TBN[1], TBN[2]),
+	RandomFloat2(RandomSeed)
+);
+return to_world(wm_, TBN[0], TBN[1], TBN[2]);
+}
+
+//prev variant for HybridDeffered renderer
 vec3 ggxSampling(inout uvec4 RandomSeed, float roughness, vec3 normal)
 {
 vec3 tangent, bitangent;
@@ -40,6 +51,12 @@ vec3 wm_ = ggx_sample_vndf(
 return to_world(wm_, tangent, bitangent, normal);
 }
 #else
+vec3 ggxSampling(inout uvec4 RandomSeed, float roughness, vec3 normal, mat3 TBN)
+{
+return AlignWithNormal( RandomInCone(RandomSeed, cos(roughness * M_PI_4)), normal );
+}
+
+//prev variant for HybridDeffered renderer
 vec3 ggxSampling(inout uvec4 RandomSeed, float roughness, vec3 normal)
 {
 return AlignWithNormal( RandomInCone(RandomSeed, cos(roughness * M_PI_4)), normal );
