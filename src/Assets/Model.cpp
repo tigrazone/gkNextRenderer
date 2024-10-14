@@ -291,14 +291,17 @@ namespace Assets
                 tinygltf::Accessor positionAccessor = model.accessors[primtive.attributes["POSITION"]];
                 tinygltf::Accessor normalAccessor = model.accessors[primtive.attributes["NORMAL"]];
                 tinygltf::Accessor texcoordAccessor = model.accessors[primtive.attributes["TEXCOORD_0"]];
+                tinygltf::Accessor tangentAccessor = model.accessors[primtive.attributes["TANGENT"]];
 
                 tinygltf::BufferView positionView = model.bufferViews[positionAccessor.bufferView];
                 tinygltf::BufferView normalView = model.bufferViews[normalAccessor.bufferView];
                 tinygltf::BufferView texcoordView = model.bufferViews[texcoordAccessor.bufferView];
+                tinygltf::BufferView tangentView = model.bufferViews[tangentAccessor.bufferView];
 
                 int positionStride = positionAccessor.ByteStride(positionView);
                 int normalStride = normalAccessor.ByteStride(normalView);
                 int texcoordStride = texcoordAccessor.ByteStride(texcoordView);
+                int tangentStride = tangentAccessor.ByteStride(tangentView);
 
                 for (size_t i = 0; i < positionAccessor.count; ++i)
                 {
@@ -329,6 +332,20 @@ namespace Assets
                         );              
                     }
 
+                    if(tangentView.byteOffset + i *
+                        tangentStride < model.buffers[tangentView.buffer].data.size())
+                    {
+                        fmt::print("tangent FOUND\n");
+                        float* tangent = reinterpret_cast<float*>(&model.buffers[tangentView.buffer].data[tangentView.byteOffset + tangentAccessor.byteOffset + i *
+                  tangentStride]);
+                        vertex.Tangent = vec4(
+                            tangent[0],
+                            tangent[1],
+                            tangent[2],
+                            tangent[3]
+                        );
+                    } else
+                        fmt::print("tangent NOT FOUND\n");
 
                     vertex.MaterialIndex = max(0, primtive.material) + matieralIdx;
                     vertices.push_back(vertex);

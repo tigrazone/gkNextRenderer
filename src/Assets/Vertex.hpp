@@ -13,6 +13,7 @@ namespace Assets
 		glm::vec3 Normal;
 		glm::vec2 TexCoord;
 		glm::uint MaterialIndex;
+		glm::vec4 Tangent;
 
 		bool operator==(const Vertex& other) const
 		{
