@@ -329,8 +329,8 @@ namespace Assets
                         vertex.TexCoord = vec2(
                             texcoord[0],
                             texcoord[1]
-                        );              
-                    }
+                        );
+                    } else vertex.TexCoord = vec2(0.f, 0.f);
 
                     if(tangentView.byteOffset + i *
                         tangentStride < model.buffers[tangentView.buffer].data.size())

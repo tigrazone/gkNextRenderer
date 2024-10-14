@@ -27,15 +27,13 @@ void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float Ra
 	const vec2 texCoord = Mix(v0.TexCoord, v1.TexCoord, v2.TexCoord, barycentrics);
 
 	vec3 tangent, bitangent;
-	bool hasTangent = hasVertexTangent(v0.Tangent);
-
-	if(!hasTangent)
+	if(length(v0.Tangent.xyz) < EPS || abs(v0.Tangent.w) < 0.5F)
 	{
 		ONB(normal, tangent, bitangent);
 	}
 	else
 	{
-		tangent   = normalize(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v1.Tangent.xyz, barycentrics));
+		tangent   = normalize(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v2.Tangent.xyz, barycentrics));
 		bitangent = cross(normal, tangent) * v0.Tangent.w;
 	}
 
