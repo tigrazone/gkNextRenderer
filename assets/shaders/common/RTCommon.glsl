@@ -8,8 +8,6 @@
 #include "Scatter.glsl"
 #include "RTSimple.glsl"
 
-bool hasVertexTangent(vec4 t) { return isZERO(t.x) && isZERO(t.y) && isZERO(t.z); }
-
 void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float RayDist, const mat4x3 WorldToObject, const vec2 TwoBaryCoords, const vec3 HitPos, const int PrimitiveIndex, const int InstanceID)
 {
     // Get the material.
