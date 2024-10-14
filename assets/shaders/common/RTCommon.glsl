@@ -8,7 +8,7 @@
 #include "Scatter.glsl"
 #include "RTSimple.glsl"
 
-void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float RayDist, const mat4x3 WorldToObject, const vec2 TwoBaryCoords, const vec3 HitPos, const int PrimitiveIndex, const int InstanceID)
+void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float RayDist, const mat4x3 WorldToObject, const mat4x3 objectToWorld, const vec2 TwoBaryCoords, const vec3 HitPos, const int PrimitiveIndex, const int InstanceID)
 {
     // Get the material.
 	const uvec2 offsets = Offsets[InstCustIndex];
@@ -18,10 +18,12 @@ void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float Ra
 	const Vertex v1 = UnpackVertex(vertexOffset + Indices[indexOffset + 1]);
 	const Vertex v2 = UnpackVertex(vertexOffset + Indices[indexOffset + 2]);
 	const Material material = Materials[v0.MaterialIndex];
+	
+	const vec3 worldRayOrigin = HitPos - RayDirection * RayDist;
 
 	// Compute the ray hit point properties.
 	const vec3 barycentrics = vec3(1.0 - TwoBaryCoords.x - TwoBaryCoords.y, TwoBaryCoords.x, TwoBaryCoords.y);
-	const vec3 normal = normalize((Mix(v0.Normal, v1.Normal, v2.Normal, barycentrics) * WorldToObject).xyz);
+	vec3 normal = normalize((Mix(v0.Normal, v1.Normal, v2.Normal, barycentrics) * WorldToObject).xyz);
 	const vec2 texCoord = Mix(v0.TexCoord, v1.TexCoord, v2.TexCoord, barycentrics);
 
 	vec3 tangent, bitangent;
@@ -30,10 +32,34 @@ void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float Ra
 		ONB(normal, tangent, bitangent);
 	}
 	else
-	{
+	{ /*
 		tangent   = normalize(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v2.Tangent.xyz, barycentrics));
 		bitangent = cross(normal, tangent) * v0.Tangent.w;
 	}
+	
+  { */
+    tangent   = vec3(objectToWorld * vec4(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v2.Tangent.xyz, barycentrics), 0.0));
+    tangent   = normalize(tangent - normal * dot(normal, tangent));
+		bitangent = cross(normal, tangent) * v0.Tangent.w;
+	}
+	
+	
+  const vec3 V = (worldRayOrigin - HitPos);
+  vec3 geonrm = normal;
+  if(dot(geonrm, V) < 0)  // Flip if back facing
+    geonrm = -geonrm;
+
+  // If backface
+  if(dot(geonrm, normal) < 0)  // Make Normal and GeoNormal on the same side
+  {
+    normal       = -normal;
+    tangent   = -tangent;
+    bitangent = -bitangent;
+  }
+
+  // handle low tessellated meshes with smooth normals
+  if(dot(geonrm, reflect(-V, normal)) < 0.0f)
+    normal = geonrm;
 
 	mat3 TBN = mat3(tangent, bitangent, normal);
 
@@ -93,11 +119,12 @@ void traceRay(in vec3 origin, in vec3 scatterDir)
         const vec3 RayDirection = scatterDir;
         const float RayDist = rayQueryGetIntersectionTEXT(rayQuery, IsCommitted);
         const mat4x3 WorldToObject = rayQueryGetIntersectionWorldToObjectEXT(rayQuery, IsCommitted);
+        const mat4x3 ObjectToWorld = rayQueryGetIntersectionObjectToWorldEXT(rayQuery, IsCommitted);
         const vec2 TwoBaryCoords = rayQueryGetIntersectionBarycentricsEXT(rayQuery, IsCommitted);
         const vec3 HitPos = RayOrigin + RayDirection * RayDist;
         const int PrimitiveIndex = rayQueryGetIntersectionPrimitiveIndexEXT(rayQuery, IsCommitted);
         const int InstanceID = rayQueryGetIntersectionInstanceIdEXT(rayQuery, IsCommitted);
-        ProcessHit(InstCustIndex, RayDirection, RayDist, WorldToObject, TwoBaryCoords, HitPos, PrimitiveIndex, InstanceID);
+        ProcessHit(InstCustIndex, RayDirection, RayDist, WorldToObject, ObjectToWorld, TwoBaryCoords, HitPos, PrimitiveIndex, InstanceID);
     }
     else
     {
