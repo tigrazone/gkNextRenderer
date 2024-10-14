@@ -8,6 +8,8 @@
 #include "Scatter.glsl"
 #include "RTSimple.glsl"
 
+bool hasVertexTangent(vec4 t) { return isZERO(t.x) && isZERO(t.y) && isZERO(t.z); }
+
 void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float RayDist, const mat4x3 WorldToObject, const vec2 TwoBaryCoords, const vec3 HitPos, const int PrimitiveIndex, const int InstanceID)
 {
     // Get the material.
@@ -25,7 +27,18 @@ void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float Ra
 	const vec2 texCoord = Mix(v0.TexCoord, v1.TexCoord, v2.TexCoord, barycentrics);
 
 	vec3 tangent, bitangent;
-	ONB(normal, tangent, bitangent);
+	bool hasTangent = hasVertexTangent(v0.Tangent);
+
+	if(!hasTangent)
+	{
+		ONB(normal, tangent, bitangent);
+	}
+	else
+	{
+		tangent   = normalize(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v1.Tangent.xyz, barycentrics));
+		bitangent = cross(normal, tangent) * v0.Tangent.w;
+	}
+
 	mat3 TBN = mat3(tangent, bitangent, normal);
 
 	int lightIdx = int(floor(RandomFloat(Ray.RandomSeed) * .99999 * Camera.LightCount));

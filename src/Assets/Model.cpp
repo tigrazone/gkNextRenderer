@@ -335,7 +335,7 @@ namespace Assets
                     if(tangentView.byteOffset + i *
                         tangentStride < model.buffers[tangentView.buffer].data.size())
                     {
-                        fmt::print("tangent FOUND\n");
+                        //fmt::print("tangent FOUND\n");
                         float* tangent = reinterpret_cast<float*>(&model.buffers[tangentView.buffer].data[tangentView.byteOffset + tangentAccessor.byteOffset + i *
                   tangentStride]);
                         vertex.Tangent = vec4(
@@ -344,8 +344,10 @@ namespace Assets
                             tangent[2],
                             tangent[3]
                         );
-                    } else
-                        fmt::print("tangent NOT FOUND\n");
+                    } else {
+                        //fmt::print("tangent NOT FOUND\n");
+                        vertex.Tangent = vec4(0.f, 0.f, 0.f, 0.f); 
+                    }
 
                     vertex.MaterialIndex = max(0, primtive.material) + matieralIdx;
                     vertices.push_back(vertex);
