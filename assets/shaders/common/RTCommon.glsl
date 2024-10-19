@@ -38,7 +38,7 @@ void ProcessHit(const int InstCustIndex, const vec3 RayDirection, const float Ra
 	}
 	
   { */
-    tangent   = vec3(objectToWorld * vec4(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v2.Tangent.xyz, barycentrics), 0.0));
+    tangent   = normalize(vec3(objectToWorld * vec4(Mix(v0.Tangent.xyz, v1.Tangent.xyz, v2.Tangent.xyz, barycentrics), 0.0f)));
     tangent   = normalize(tangent - normal * dot(normal, tangent));
 		bitangent = cross(normal, tangent) * v0.Tangent.w;
 	}
