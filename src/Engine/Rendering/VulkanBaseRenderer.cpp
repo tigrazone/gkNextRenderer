@@ -3774,7 +3774,9 @@ namespace Vulkan
         if (renderViews_)
         {
             renderViews_->ClearSchedule();
+            renderViews_->InvalidateAllTemporalHistory(EHistoryInvalidationReason::SceneChanged);
         }
+        resetUpscalerHistory_ = true;
         if (caps_.supportRayTracing)
         {
             DeleteAccelerationStructures();

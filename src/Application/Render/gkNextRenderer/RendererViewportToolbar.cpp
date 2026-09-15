@@ -111,11 +111,13 @@ void NextRendererGameInstance::DrawModeRail(FRendererUiState& uiState)
     const ImVec2 railSize = ImVec2(ModeRailWidth, viewport->Size.y - TitlebarSize - 30.0f);
 
     ImDrawList* background = ImGui::GetBackgroundDrawList();
+    constexpr float railBackgroundAlpha = 0.70f;
     background->AddRectFilled(railPos, railPos + railSize,
-                              NextUI::Theme::ColorU32(NextUI::Theme::EColor::Background));
+                              NextUI::Theme::ColorU32(NextUI::Theme::EColor::Background,
+                                                      railBackgroundAlpha));
     background->AddLine(ImVec2(railPos.x + railSize.x - 1.0f, railPos.y),
                         ImVec2(railPos.x + railSize.x - 1.0f, railPos.y + railSize.y),
-                        NextUI::Theme::ColorU32(NextUI::Theme::EColor::Border));
+                        NextUI::Theme::ColorU32(NextUI::Theme::EColor::Border, 0.55f));
 
     ImGui::SetNextWindowPos(railPos, ImGuiCond_Always);
     ImGui::SetNextWindowSize(railSize, ImGuiCond_Always);

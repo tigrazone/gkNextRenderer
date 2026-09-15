@@ -49,6 +49,7 @@ namespace NextUI::Foundation
         float height = 30.0f;
         float horizontalPadding = 10.0f;
         float verticalPadding = 4.0f;
+        float backgroundAlpha = 0.76f;
         float centerWidth = 0.0f;
         float rightWidth = 0.0f;
         std::function<void()> drawLeftContent;

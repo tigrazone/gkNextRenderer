@@ -768,6 +768,11 @@ namespace Assets
         needUpdateTLAS = false;
         return updateNodeProxies;
     }
+
+    void Scene::RequestGpuNodeProxyUpload()
+    {
+        needUpdateTLAS = true;
+    }
     
     void Scene::SyncUpdateScene()
     {

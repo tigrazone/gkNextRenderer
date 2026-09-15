@@ -194,7 +194,7 @@ namespace NextUI::Foundation
             ImVec2(viewport->Pos.x, viewport->Pos.y + viewport->Size.y - options.height), ImGuiCond_Always);
         ImGui::SetNextWindowSize(ImVec2(viewport->Size.x, options.height), ImGuiCond_Always);
         ImGui::SetNextWindowViewport(viewport->ID);
-        ImGui::SetNextWindowBgAlpha(1.0f);
+        ImGui::SetNextWindowBgAlpha(options.backgroundAlpha);
         FScopedStyle style;
         style.Add(ImGuiStyleVar_WindowPadding, ImVec2(options.horizontalPadding, options.verticalPadding))
             .Add(ImGuiStyleVar_WindowMinSize, ImVec2(0.0f, 0.0f))

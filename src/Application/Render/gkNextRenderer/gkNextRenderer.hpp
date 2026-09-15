@@ -93,6 +93,7 @@ private:
         glm::vec3 right{1.0f, 0.0f, 0.0f};
         glm::vec3 up{0.0f, 1.0f, 0.0f};
         std::string debugName{"tempBox"};
+        bool useMuzzleTail = false;
     };
 
     void CreateBoxAndPushFromView(const FLaunchView& view);
@@ -105,6 +106,9 @@ private:
     void DrawModeRail(FRendererUiState& uiState);
     void DrawViewportTopBar(const FGameUiFrameContext& context, FRendererUiState& uiState);
     void DrawViewportCheatSheet(FRendererUiState& uiState);
+    void DrawShootHint(const FGameUiFrameContext& context);
+    void UpdateMuzzleTransform();
+    void RefreshMuzzleTransform();
     void RequestScreenshot(bool openFolder, const std::string& tag);
     void DrawVideoCaptureMenuItems();
     void RequestThreeSecondVideo(Runtime::IScreenShotService::EVideoOutputScale outputScale);
@@ -130,6 +134,9 @@ private:
 
     uint32_t modelId_;
     uint32_t boxModelId_;
+    uint32_t muzzleModelId_ = 0;
+    float launchCubeScale_ = 1.0f;
+    std::shared_ptr<Assets::Node> muzzleNode_;
     std::vector<uint32_t> matIds_;
     std::vector<uint32_t> dropSphereMatIds_;
     uint32_t dropSphereSequence_ = 0;
@@ -140,4 +147,8 @@ private:
         Runtime::IScreenShotService::EVideoOutputScale::Half;
     bool playbackPaused_ = false;
     bool stepRequested_ = false;
+    float shootHintRemainingSeconds_ = 0.0f;
+    float muzzleFieldOfView_ = -1.0f;
+    float muzzlePitchOffsetDegrees_ = 0.0f;
+    float muzzleYawOffsetDegrees_ = 0.0f;
 };

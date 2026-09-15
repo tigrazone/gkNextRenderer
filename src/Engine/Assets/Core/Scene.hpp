@@ -202,6 +202,10 @@ namespace Assets
         void StartUpdateNodes();
         bool EndUpdateNodes();
         bool GPUUpdateNodes();
+        // Request the current node-proxy snapshot to be uploaded on this frame. This is for
+        // camera-relative presentation nodes that have already patched nodeProxiesBackup and
+        // must not wait for the normal asynchronous scene update handoff.
+        void RequestGpuNodeProxyUpload();
 
         Node* GetNode(const std::string& name);
         const Node* GetNode(const std::string& name) const;
