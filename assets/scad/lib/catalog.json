@@ -1677,7 +1677,7 @@
               "default": "0"
             }
           ],
-          "line": 710,
+          "line": 716,
           "footprint": [
             6.4,
             1.4
@@ -1707,7 +1707,7 @@
               "default": "0"
             }
           ],
-          "line": 819,
+          "line": 825,
           "footprint": [
             4.6,
             0.39
@@ -1737,7 +1737,7 @@
               "default": "6"
             }
           ],
-          "line": 806,
+          "line": 812,
           "footprint": [
             7.0,
             1.0
@@ -1797,7 +1797,7 @@
               "default": "4.5"
             }
           ],
-          "line": 779,
+          "line": 785,
           "footprint": [
             6.2,
             5.7
@@ -1831,7 +1831,7 @@
               "default": "ab_GREENL()"
             }
           ],
-          "line": 745,
+          "line": 751,
           "footprint": [
             6.0,
             3.36
@@ -1865,7 +1865,7 @@
               "default": "ab_GREENL()"
             }
           ],
-          "line": 763,
+          "line": 769,
           "footprint": [
             2.7,
             2.7
@@ -1985,7 +1985,7 @@
               "default": "0"
             }
           ],
-          "line": 725,
+          "line": 731,
           "footprint": [
             3.95,
             0.64
@@ -2004,7 +2004,7 @@
         {
           "name": "ab_bldg_windmill",
           "category": "bldg",
-          "params": "h = 7, seed = 0",
+          "params": "h = 7, seed = 0, speed = 26",
           "paramList": [
             {
               "name": "h",
@@ -2013,6 +2013,10 @@
             {
               "name": "seed",
               "default": "0"
+            },
+            {
+              "name": "speed",
+              "default": "26"
             }
           ],
           "line": 689,
@@ -2045,7 +2049,7 @@
               "default": "1"
             }
           ],
-          "line": 1001,
+          "line": 1007,
           "footprint": [
             0.6,
             0.6
@@ -2083,7 +2087,7 @@
               "default": "-1"
             }
           ],
-          "line": 1478,
+          "line": 1560,
           "footprint": [
             1.0,
             0.79
@@ -2113,7 +2117,7 @@
               "default": "0"
             }
           ],
-          "line": 1528,
+          "line": 1610,
           "footprint": [
             1.9,
             1.9
@@ -2143,7 +2147,7 @@
               "default": "2.0"
             }
           ],
-          "line": 1571,
+          "line": 1653,
           "footprint": [
             1.11,
             1.08
@@ -2169,7 +2173,7 @@
               "default": "0"
             }
           ],
-          "line": 1587,
+          "line": 1669,
           "footprint": [
             0.84,
             1.85
@@ -2195,7 +2199,7 @@
               "default": "0"
             }
           ],
-          "line": 1554,
+          "line": 1636,
           "footprint": [
             1.2,
             0.95
@@ -2501,7 +2505,7 @@
               "default": "0.35"
             }
           ],
-          "line": 1395,
+          "line": 1477,
           "footprint": [
             0.7,
             0.1
@@ -2539,7 +2543,7 @@
               "default": "0.8"
             }
           ],
-          "line": 1413,
+          "line": 1495,
           "footprint": [
             6.7,
             0.1
@@ -2573,7 +2577,7 @@
               "default": "1.0"
             }
           ],
-          "line": 1423,
+          "line": 1505,
           "footprint": [
             4.1,
             4.1
@@ -2607,7 +2611,7 @@
               "default": "0.8"
             }
           ],
-          "line": 1407,
+          "line": 1489,
           "footprint": [
             5.5,
             0.1
@@ -2637,7 +2641,7 @@
               "default": "0"
             }
           ],
-          "line": 1445,
+          "line": 1527,
           "footprint": [
             0.6,
             0.6
@@ -2663,7 +2667,7 @@
               "default": "0.8"
             }
           ],
-          "line": 1456,
+          "line": 1538,
           "footprint": [
             0.85,
             0.1
@@ -2693,7 +2697,7 @@
               "default": "0.9"
             }
           ],
-          "line": 1429,
+          "line": 1511,
           "footprint": [
             1.08,
             0.16
@@ -2723,7 +2727,7 @@
               "default": "1.0"
             }
           ],
-          "line": 1468,
+          "line": 1550,
           "footprint": [
             0.95,
             0.16
@@ -3166,7 +3170,7 @@
               "default": "0"
             }
           ],
-          "line": 879,
+          "line": 885,
           "footprint": [
             1.85,
             1.45
@@ -3196,7 +3200,7 @@
               "default": "0"
             }
           ],
-          "line": 985,
+          "line": 991,
           "footprint": [
             1.96,
             0.64
@@ -3226,7 +3230,7 @@
               "default": "0"
             }
           ],
-          "line": 940,
+          "line": 946,
           "footprint": [
             3.75,
             2.45
@@ -3256,7 +3260,7 @@
               "default": "0"
             }
           ],
-          "line": 1011,
+          "line": 1017,
           "footprint": [
             1.45,
             1.64
@@ -3286,7 +3290,7 @@
               "default": "0"
             }
           ],
-          "line": 891,
+          "line": 897,
           "footprint": [
             1.28,
             1.13
@@ -3316,7 +3320,7 @@
               "default": "1.0"
             }
           ],
-          "line": 953,
+          "line": 959,
           "footprint": [
             1.8,
             1.8
@@ -3342,7 +3346,7 @@
               "default": "0"
             }
           ],
-          "line": 906,
+          "line": 912,
           "footprint": [
             0.65,
             0.74
@@ -3372,7 +3376,7 @@
               "default": "0"
             }
           ],
-          "line": 1024,
+          "line": 1030,
           "footprint": [
             1.8,
             1.8
@@ -3402,7 +3406,7 @@
               "default": "0"
             }
           ],
-          "line": 926,
+          "line": 932,
           "footprint": [
             2.3,
             2.3
@@ -3432,7 +3436,7 @@
               "default": "0"
             }
           ],
-          "line": 861,
+          "line": 867,
           "footprint": [
             5.27,
             5.32
@@ -3462,7 +3466,7 @@
               "default": "0"
             }
           ],
-          "line": 915,
+          "line": 921,
           "footprint": [
             1.91,
             2.08
@@ -3492,7 +3496,7 @@
               "default": "0"
             }
           ],
-          "line": 832,
+          "line": 838,
           "footprint": [
             3.3,
             3.0
@@ -3522,7 +3526,7 @@
               "default": "0"
             }
           ],
-          "line": 847,
+          "line": 853,
           "footprint": [
             3.0,
             3.0
@@ -3548,7 +3552,7 @@
               "default": "1.0"
             }
           ],
-          "line": 1186,
+          "line": 1211,
           "footprint": [
             2.0,
             2.0
@@ -3574,7 +3578,7 @@
               "default": "1.1"
             }
           ],
-          "line": 1055,
+          "line": 1061,
           "footprint": [
             2.32,
             2.32
@@ -3587,6 +3591,48 @@
           ],
           "triangles": 720,
           "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "ab_part_checkpoint_flag",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 1421,
+          "footprint": [
+            1.1,
+            0.03
+          ],
+          "height": 0.0,
+          "zMin": -0.7,
+          "center": [
+            0.55,
+            -0.0
+          ],
+          "triangles": 8,
+          "colors": 1,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "ab_part_chest_lid",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 1307,
+          "footprint": [
+            1.34,
+            0.94
+          ],
+          "height": 0.45,
+          "zMin": -0.02,
+          "center": [
+            0.0,
+            -0.47
+          ],
+          "triangles": 36,
+          "colors": 2,
           "warnings": 0,
           "ok": true
         },
@@ -3625,6 +3671,62 @@
           "ok": true
         },
         {
+          "name": "ab_part_fan_blades",
+          "category": "part",
+          "params": "s = 1.0",
+          "paramList": [
+            {
+              "name": "s",
+              "default": "1.0"
+            }
+          ],
+          "line": 1184,
+          "footprint": [
+            1.75,
+            0.3
+          ],
+          "height": 0.88,
+          "zMin": -0.88,
+          "center": [
+            0.0,
+            -0.05
+          ],
+          "triangles": 144,
+          "colors": 9,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "ab_part_fountain_column",
+          "category": "part",
+          "params": "h = 4, r = 0.45",
+          "paramList": [
+            {
+              "name": "h",
+              "default": "4"
+            },
+            {
+              "name": "r",
+              "default": "0.45"
+            }
+          ],
+          "line": 1358,
+          "footprint": [
+            1.63,
+            1.7
+          ],
+          "height": 3.54,
+          "zMin": 0.0,
+          "center": [
+            0.08,
+            -0.0
+          ],
+          "triangles": 936,
+          "colors": 7,
+          "warnings": 0,
+          "ok": true
+        },
+        {
           "name": "ab_part_gate_grid",
           "category": "part",
           "params": "w = 4, h = 3",
@@ -3638,7 +3740,7 @@
               "default": "3"
             }
           ],
-          "line": 1216,
+          "line": 1251,
           "footprint": [
             3.6,
             0.08
@@ -3681,6 +3783,53 @@
           ],
           "triangles": 84,
           "colors": 7,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "ab_part_laser_beam",
+          "category": "part",
+          "params": "L = 6",
+          "paramList": [
+            {
+              "name": "L",
+              "default": "6"
+            }
+          ],
+          "line": 1337,
+          "footprint": [
+            5.4,
+            0.1
+          ],
+          "height": 0.05,
+          "zMin": -0.05,
+          "center": [
+            2.7,
+            0.0
+          ],
+          "triangles": 48,
+          "colors": 1,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "ab_part_lever_arm",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 1229,
+          "footprint": [
+            0.2,
+            0.2
+          ],
+          "height": 1.02,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 168,
+          "colors": 2,
           "warnings": 0,
           "ok": true
         },
@@ -3851,6 +4000,36 @@
           "ok": true
         },
         {
+          "name": "ab_part_spike_ball",
+          "category": "part",
+          "params": "h = 4, r = 0.7",
+          "paramList": [
+            {
+              "name": "h",
+              "default": "4"
+            },
+            {
+              "name": "r",
+              "default": "0.7"
+            }
+          ],
+          "line": 1163,
+          "footprint": [
+            2.1,
+            2.1
+          ],
+          "height": -0.37,
+          "zMin": -4.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 2808,
+          "colors": 22,
+          "warnings": 0,
+          "ok": true
+        },
+        {
           "name": "ab_part_spring_cap",
           "category": "part",
           "params": "r = 0.8",
@@ -3873,6 +4052,27 @@
           ],
           "triangles": 96,
           "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "ab_part_windmill_blades",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 701,
+          "footprint": [
+            6.44,
+            0.4
+          ],
+          "height": 3.22,
+          "zMin": -3.22,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 144,
+          "colors": 9,
           "warnings": 0,
           "ok": true
         },
@@ -4529,7 +4729,7 @@
               "default": "3"
             }
           ],
-          "line": 1242,
+          "line": 1277,
           "footprint": [
             1.56,
             1.67
@@ -4555,7 +4755,7 @@
               "default": "0"
             }
           ],
-          "line": 1384,
+          "line": 1466,
           "footprint": [
             0.67,
             0.67
@@ -4576,7 +4776,7 @@
           "category": "prop",
           "params": "",
           "paramList": [],
-          "line": 1359,
+          "line": 1441,
           "footprint": [
             1.8,
             0.53
@@ -4602,7 +4802,7 @@
               "default": "0.9"
             }
           ],
-          "line": 1342,
+          "line": 1413,
           "footprint": [
             1.8,
             1.8
@@ -4628,7 +4828,7 @@
               "default": "0.7"
             }
           ],
-          "line": 1262,
+          "line": 1297,
           "footprint": [
             1.6,
             1.6
@@ -4658,7 +4858,7 @@
               "default": "0"
             }
           ],
-          "line": 1193,
+          "line": 1218,
           "footprint": [
             2.4,
             2.4
@@ -4692,7 +4892,7 @@
               "default": "2.3"
             }
           ],
-          "line": 1071,
+          "line": 1077,
           "footprint": [
             2.5,
             2.5
@@ -4722,7 +4922,7 @@
               "default": "0.5"
             }
           ],
-          "line": 1320,
+          "line": 1391,
           "footprint": [
             1.04,
             1.04
@@ -4752,7 +4952,7 @@
               "default": "0"
             }
           ],
-          "line": 1349,
+          "line": 1428,
           "footprint": [
             2.15,
             2.0
@@ -4778,18 +4978,18 @@
               "default": "0"
             }
           ],
-          "line": 1271,
+          "line": 1321,
           "footprint": [
             1.34,
-            1.11
+            0.96
           ],
-          "height": 1.52,
+          "height": 1.15,
           "zMin": -0.01,
           "center": [
             0.0,
-            0.09
+            -0.01
           ],
-          "triangles": 384,
+          "triangles": 382,
           "colors": 12,
           "warnings": 0,
           "ok": true
@@ -4799,7 +4999,7 @@
           "category": "prop",
           "params": "",
           "paramList": [],
-          "line": 1376,
+          "line": 1458,
           "footprint": [
             0.5,
             0.5
@@ -4829,7 +5029,7 @@
               "default": "0"
             }
           ],
-          "line": 1037,
+          "line": 1043,
           "footprint": [
             1.04,
             1.04
@@ -4848,14 +5048,26 @@
         {
           "name": "ab_prop_fan",
           "category": "prop",
-          "params": "s = 1.0",
+          "params": "s = 1.0, speed = 520, power = 6, range = 7",
           "paramList": [
             {
               "name": "s",
               "default": "1.0"
+            },
+            {
+              "name": "speed",
+              "default": "520"
+            },
+            {
+              "name": "power",
+              "default": "6"
+            },
+            {
+              "name": "range",
+              "default": "7"
             }
           ],
-          "line": 1167,
+          "line": 1199,
           "footprint": [
             2.0,
             1.2
@@ -4885,7 +5097,7 @@
               "default": "ab_CREAM()"
             }
           ],
-          "line": 1113,
+          "line": 1119,
           "footprint": [
             4.18,
             0.18
@@ -4915,7 +5127,7 @@
               "default": "0"
             }
           ],
-          "line": 1104,
+          "line": 1110,
           "footprint": [
             1.44,
             0.18
@@ -4934,7 +5146,7 @@
         {
           "name": "ab_prop_fountain_jet",
           "category": "prop",
-          "params": "h = 4, r = 0.45",
+          "params": "h = 4, r = 0.45, period = 3.2, phase = 0, lift = 6",
           "paramList": [
             {
               "name": "h",
@@ -4943,9 +5155,21 @@
             {
               "name": "r",
               "default": "0.45"
+            },
+            {
+              "name": "period",
+              "default": "3.2"
+            },
+            {
+              "name": "phase",
+              "default": "0"
+            },
+            {
+              "name": "lift",
+              "default": "6"
             }
           ],
-          "line": 1300,
+          "line": 1371,
           "footprint": [
             1.64,
             1.7
@@ -4983,7 +5207,7 @@
               "default": "false"
             }
           ],
-          "line": 1229,
+          "line": 1264,
           "footprint": [
             4.4,
             0.52
@@ -5009,7 +5233,7 @@
               "default": "1.4"
             }
           ],
-          "line": 1332,
+          "line": 1403,
           "footprint": [
             3.0,
             1.0
@@ -5035,7 +5259,7 @@
               "default": "3"
             }
           ],
-          "line": 1367,
+          "line": 1449,
           "footprint": [
             0.7,
             0.1
@@ -5061,7 +5285,7 @@
               "default": "3.2"
             }
           ],
-          "line": 1126,
+          "line": 1132,
           "footprint": [
             1.24,
             0.68
@@ -5080,14 +5304,26 @@
         {
           "name": "ab_prop_laser",
           "category": "prop",
-          "params": "L = 6",
+          "params": "L = 6, period = 2.4, duty = 0.55, phase = 0",
           "paramList": [
             {
               "name": "L",
               "default": "6"
+            },
+            {
+              "name": "period",
+              "default": "2.4"
+            },
+            {
+              "name": "duty",
+              "default": "0.55"
+            },
+            {
+              "name": "phase",
+              "default": "0"
             }
           ],
-          "line": 1290,
+          "line": 1344,
           "footprint": [
             6.6,
             0.6
@@ -5106,9 +5342,14 @@
         {
           "name": "ab_prop_lever",
           "category": "prop",
-          "params": "",
-          "paramList": [],
-          "line": 1204,
+          "params": "idx = 0",
+          "paramList": [
+            {
+              "name": "idx",
+              "default": "0"
+            }
+          ],
+          "line": 1240,
           "footprint": [
             0.86,
             0.5
@@ -5134,7 +5375,7 @@
               "default": "0"
             }
           ],
-          "line": 1311,
+          "line": 1382,
           "footprint": [
             0.8,
             0.8
@@ -5164,7 +5405,7 @@
               "default": "0"
             }
           ],
-          "line": 1084,
+          "line": 1090,
           "footprint": [
             1.68,
             0.14
@@ -5190,7 +5431,7 @@
               "default": "0"
             }
           ],
-          "line": 1094,
+          "line": 1100,
           "footprint": [
             1.6,
             0.23
@@ -5216,7 +5457,7 @@
               "default": "0.7"
             }
           ],
-          "line": 1144,
+          "line": 1150,
           "footprint": [
             2.1,
             2.1
@@ -5235,7 +5476,7 @@
         {
           "name": "ab_prop_spike_ball_chain",
           "category": "prop",
-          "params": "h = 4, r = 0.7",
+          "params": "h = 4, r = 0.7, ang = 35, period = 2.6, phase = 0",
           "paramList": [
             {
               "name": "h",
@@ -5244,9 +5485,21 @@
             {
               "name": "r",
               "default": "0.7"
+            },
+            {
+              "name": "ang",
+              "default": "35"
+            },
+            {
+              "name": "period",
+              "default": "2.6"
+            },
+            {
+              "name": "phase",
+              "default": "0"
             }
           ],
-          "line": 1156,
+          "line": 1177,
           "footprint": [
             2.1,
             2.1
@@ -5276,7 +5529,7 @@
               "default": "1.0"
             }
           ],
-          "line": 1135,
+          "line": 1141,
           "footprint": [
             3.0,
             1.0
@@ -21783,6 +22036,1405 @@
             0.0
           ],
           "triangles": 96,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "kit_raiden",
+      "file": "kit_raiden.scad",
+      "prefix": "nr_",
+      "scaleClass": "mid",
+      "modules": [
+        {
+          "name": "nr_bldg_bunker",
+          "category": "bldg",
+          "params": "damage = 0",
+          "paramList": [
+            {
+              "name": "damage",
+              "default": "0"
+            }
+          ],
+          "line": 193,
+          "footprint": [
+            4.8,
+            4.3
+          ],
+          "height": 2.59,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 684,
+          "colors": 20,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_bldg_controltower",
+          "category": "bldg",
+          "params": "",
+          "paramList": [],
+          "line": 180,
+          "footprint": [
+            3.4,
+            3.4
+          ],
+          "height": 7.61,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 160,
+          "colors": 7,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_bldg_factory",
+          "category": "bldg",
+          "params": "",
+          "paramList": [],
+          "line": 201,
+          "footprint": [
+            6.4,
+            7.03
+          ],
+          "height": 5.75,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.01
+          ],
+          "triangles": 164,
+          "colors": 11,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_bldg_fueldepot",
+          "category": "bldg",
+          "params": "",
+          "paramList": [],
+          "line": 215,
+          "footprint": [
+            6.5,
+            5.0
+          ],
+          "height": 3.35,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 300,
+          "colors": 7,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_bldg_hangar",
+          "category": "bldg",
+          "params": "paint = 2",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "2"
+            }
+          ],
+          "line": 168,
+          "footprint": [
+            7.0,
+            7.2
+          ],
+          "height": 3.55,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 140,
+          "colors": 11,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_fx_blast",
+          "category": "fx",
+          "params": "",
+          "paramList": [],
+          "line": 410,
+          "footprint": [
+            1.94,
+            1.8
+          ],
+          "height": 1.03,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 840,
+          "colors": 7,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_fx_crater",
+          "category": "fx",
+          "params": "",
+          "paramList": [],
+          "line": 419,
+          "footprint": [
+            2.58,
+            2.58
+          ],
+          "height": 0.17,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 208,
+          "colors": 9,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_fx_exhaust",
+          "category": "fx",
+          "params": "",
+          "paramList": [],
+          "line": 387,
+          "footprint": [
+            0.44,
+            1.25
+          ],
+          "height": 0.16,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.28
+          ],
+          "triangles": 16,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_fx_flash",
+          "category": "fx",
+          "params": "",
+          "paramList": [],
+          "line": 396,
+          "footprint": [
+            1.21,
+            1.4
+          ],
+          "height": 0.15,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 44,
+          "colors": 1,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_fx_smoke",
+          "category": "fx",
+          "params": "seed = 0",
+          "paramList": [
+            {
+              "name": "seed",
+              "default": "0"
+            }
+          ],
+          "line": 401,
+          "footprint": [
+            1.4,
+            1.19
+          ],
+          "height": 2.42,
+          "zMin": 0.0,
+          "center": [
+            0.05,
+            0.0
+          ],
+          "triangles": 480,
+          "colors": 4,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_ground_farmland",
+          "category": "ground",
+          "params": "",
+          "paramList": [],
+          "line": 158,
+          "footprint": [
+            16.0,
+            16.0
+          ],
+          "height": 0.2,
+          "zMin": -0.4,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 172,
+          "colors": 9,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_ground_grass",
+          "category": "ground",
+          "params": "seed = 0",
+          "paramList": [
+            {
+              "name": "seed",
+              "default": "0"
+            }
+          ],
+          "line": 108,
+          "footprint": [
+            16.0,
+            16.0
+          ],
+          "height": 0.01,
+          "zMin": -0.4,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 108,
+          "colors": 9,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_ground_quay",
+          "category": "ground",
+          "params": "",
+          "paramList": [],
+          "line": 149,
+          "footprint": [
+            16.0,
+            16.0
+          ],
+          "height": 0.03,
+          "zMin": -0.4,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 60,
+          "colors": 5,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_ground_road",
+          "category": "ground",
+          "params": "",
+          "paramList": [],
+          "line": 130,
+          "footprint": [
+            16.0,
+            16.0
+          ],
+          "height": 0.1,
+          "zMin": -0.4,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 96,
+          "colors": 8,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_ground_runway",
+          "category": "ground",
+          "params": "",
+          "paramList": [],
+          "line": 119,
+          "footprint": [
+            16.0,
+            16.0
+          ],
+          "height": 0.08,
+          "zMin": -0.4,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 180,
+          "colors": 15,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_ground_water",
+          "category": "ground",
+          "params": "",
+          "paramList": [],
+          "line": 140,
+          "footprint": [
+            16.0,
+            16.0
+          ],
+          "height": 0.01,
+          "zMin": -0.4,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 96,
+          "colors": 8,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_item_bomb",
+          "category": "item",
+          "params": "",
+          "paramList": [],
+          "line": 368,
+          "footprint": [
+            1.1,
+            1.12
+          ],
+          "height": 0.55,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.01
+          ],
+          "triangles": 64,
+          "colors": 4,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_item_medal",
+          "category": "item",
+          "params": "",
+          "paramList": [],
+          "line": 350,
+          "footprint": [
+            1.04,
+            1.04
+          ],
+          "height": 0.28,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 84,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_item_option",
+          "category": "item",
+          "params": "",
+          "paramList": [],
+          "line": 376,
+          "footprint": [
+            1.1,
+            1.1
+          ],
+          "height": 0.26,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 32,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_item_power",
+          "category": "item",
+          "params": "",
+          "paramList": [],
+          "line": 341,
+          "footprint": [
+            0.95,
+            0.95
+          ],
+          "height": 0.29,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 44,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_item_repair",
+          "category": "item",
+          "params": "",
+          "paramList": [],
+          "line": 359,
+          "footprint": [
+            0.95,
+            0.95
+          ],
+          "height": 0.3,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 44,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_nature_rock",
+          "category": "nature",
+          "params": "seed = 0",
+          "paramList": [
+            {
+              "name": "seed",
+              "default": "0"
+            }
+          ],
+          "line": 285,
+          "footprint": [
+            2.13,
+            2.46
+          ],
+          "height": 0.95,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.0
+          ],
+          "triangles": 48,
+          "colors": 1,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_nature_tree",
+          "category": "nature",
+          "params": "seed = 0",
+          "paramList": [
+            {
+              "name": "seed",
+              "default": "0"
+            }
+          ],
+          "line": 276,
+          "footprint": [
+            2.39,
+            2.39
+          ],
+          "height": 3.45,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 156,
+          "colors": 4,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_armour",
+          "category": "part",
+          "params": "paint = 1",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            }
+          ],
+          "line": 31,
+          "footprint": [
+            1.1,
+            1.2
+          ],
+          "height": 0.34,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 116,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_blade",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 38,
+          "footprint": [
+            2.5,
+            0.28
+          ],
+          "height": 0.15,
+          "zMin": 0.0,
+          "center": [
+            1.25,
+            0.0
+          ],
+          "triangles": 32,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_canopy",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 33,
+          "footprint": [
+            0.8,
+            1.4
+          ],
+          "height": 0.63,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 52,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_core",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 35,
+          "footprint": [
+            1.0,
+            1.5
+          ],
+          "height": 0.8,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 104,
+          "colors": 5,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_engine",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 34,
+          "footprint": [
+            0.7,
+            1.53
+          ],
+          "height": 0.83,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.01
+          ],
+          "triangles": 152,
+          "colors": 6,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_fin",
+          "category": "part",
+          "params": "paint = 1",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            }
+          ],
+          "line": 37,
+          "footprint": [
+            0.22,
+            1.1
+          ],
+          "height": 0.9,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 20,
+          "colors": 1,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_gun",
+          "category": "part",
+          "params": "",
+          "paramList": [],
+          "line": 36,
+          "footprint": [
+            0.4,
+            1.22
+          ],
+          "height": 0.4,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.25
+          ],
+          "triangles": 116,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_pod",
+          "category": "part",
+          "params": "paint = 1",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            }
+          ],
+          "line": 39,
+          "footprint": [
+            0.7,
+            1.2
+          ],
+          "height": 0.5,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.05
+          ],
+          "triangles": 116,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_part_wing",
+          "category": "part",
+          "params": "paint = 1",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            }
+          ],
+          "line": 32,
+          "footprint": [
+            1.1,
+            1.9
+          ],
+          "height": 0.27,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 28,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_barrier",
+          "category": "prop",
+          "params": "",
+          "paramList": [],
+          "line": 259,
+          "footprint": [
+            3.4,
+            0.67
+          ],
+          "height": 0.75,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.01
+          ],
+          "triangles": 104,
+          "colors": 8,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_container",
+          "category": "prop",
+          "params": "paint = 1",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            }
+          ],
+          "line": 238,
+          "footprint": [
+            2.4,
+            5.03
+          ],
+          "height": 2.34,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.01
+          ],
+          "triangles": 128,
+          "colors": 10,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_crane",
+          "category": "prop",
+          "params": "",
+          "paramList": [],
+          "line": 247,
+          "footprint": [
+            4.2,
+            6.5
+          ],
+          "height": 6.25,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -1.15
+          ],
+          "triangles": 92,
+          "colors": 7,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_crate",
+          "category": "prop",
+          "params": "",
+          "paramList": [],
+          "line": 268,
+          "footprint": [
+            1.2,
+            1.2
+          ],
+          "height": 1.1,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 44,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_radar",
+          "category": "prop",
+          "params": "",
+          "paramList": [],
+          "line": 228,
+          "footprint": [
+            3.0,
+            2.6
+          ],
+          "height": 3.72,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 88,
+          "colors": 6,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_turret",
+          "category": "prop",
+          "params": "paint = 1, damage = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            }
+          ],
+          "line": 68,
+          "footprint": [
+            2.3,
+            2.78
+          ],
+          "height": 1.35,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.24
+          ],
+          "triangles": 492,
+          "colors": 16,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_prop_wreck",
+          "category": "prop",
+          "params": "seed = 4, paint = 1, stage = 1",
+          "paramList": [
+            {
+              "name": "seed",
+              "default": "4"
+            },
+            {
+              "name": "paint",
+              "default": "1"
+            },
+            {
+              "name": "stage",
+              "default": "1"
+            }
+          ],
+          "line": 43,
+          "footprint": [
+            7.49,
+            8.28
+          ],
+          "height": 0.8,
+          "zMin": 0.0,
+          "center": [
+            0.22,
+            -0.21
+          ],
+          "triangles": 436,
+          "colors": 19,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_bomber",
+          "category": "veh",
+          "params": "paint = 2, damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "2"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 25,
+          "footprint": [
+            8.77,
+            6.07
+          ],
+          "height": 1.98,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.02
+          ],
+          "triangles": 1864,
+          "colors": 76,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_fortress",
+          "category": "veh",
+          "params": "paint = 1, damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 28,
+          "footprint": [
+            14.16,
+            8.35
+          ],
+          "height": 2.52,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.25
+          ],
+          "triangles": 3220,
+          "colors": 126,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_gunship",
+          "category": "veh",
+          "params": "paint = 4, damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "4"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 27,
+          "footprint": [
+            6.32,
+            5.05
+          ],
+          "height": 1.68,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.11
+          ],
+          "triangles": 1612,
+          "colors": 60,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_interceptor",
+          "category": "veh",
+          "params": "paint = 1, damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 24,
+          "footprint": [
+            5.48,
+            4.56
+          ],
+          "height": 1.56,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.17
+          ],
+          "triangles": 1152,
+          "colors": 47,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_launcher",
+          "category": "veh",
+          "params": "paint = 2, damage = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "2"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            }
+          ],
+          "line": 81,
+          "footprint": [
+            2.44,
+            3.7
+          ],
+          "height": 1.53,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 660,
+          "colors": 22,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_patrolboat",
+          "category": "veh",
+          "params": "paint = 2, damage = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "2"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            }
+          ],
+          "line": 94,
+          "footprint": [
+            2.65,
+            5.4
+          ],
+          "height": 1.91,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 1120,
+          "colors": 35,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_player",
+          "category": "veh",
+          "params": "damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 21,
+          "footprint": [
+            5.48,
+            4.56
+          ],
+          "height": 1.56,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.17
+          ],
+          "triangles": 1152,
+          "colors": 47,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_rotorcraft",
+          "category": "veh",
+          "params": "paint = 3, damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "3"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 26,
+          "footprint": [
+            5.86,
+            5.86
+          ],
+          "height": 1.92,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.15
+          ],
+          "triangles": 1132,
+          "colors": 44,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_scout",
+          "category": "veh",
+          "params": "paint = 1, damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "1"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 23,
+          "footprint": [
+            3.4,
+            3.68
+          ],
+          "height": 1.16,
+          "zMin": 0.0,
+          "center": [
+            -0.04,
+            -0.14
+          ],
+          "triangles": 844,
+          "colors": 36,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_tank",
+          "category": "veh",
+          "params": "paint = 2, damage = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "2"
+            },
+            {
+              "name": "damage",
+              "default": "0"
+            }
+          ],
+          "line": 54,
+          "footprint": [
+            2.8,
+            3.98
+          ],
+          "height": 1.34,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.32
+          ],
+          "triangles": 416,
+          "colors": 15,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_veh_wingman",
+          "category": "veh",
+          "params": "damage = 0, explode = 0",
+          "paramList": [
+            {
+              "name": "damage",
+              "default": "0"
+            },
+            {
+              "name": "explode",
+              "default": "0"
+            }
+          ],
+          "line": 22,
+          "footprint": [
+            3.4,
+            3.68
+          ],
+          "height": 1.16,
+          "zMin": 0.0,
+          "center": [
+            -0.04,
+            -0.14
+          ],
+          "triangles": 844,
+          "colors": 36,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_wpn_bolt",
+          "category": "wpn",
+          "params": "hostile = false",
+          "paramList": [
+            {
+              "name": "hostile",
+              "default": "false"
+            }
+          ],
+          "line": 292,
+          "footprint": [
+            0.2,
+            0.95
+          ],
+          "height": 0.21,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 32,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_wpn_bomb",
+          "category": "wpn",
+          "params": "",
+          "paramList": [],
+          "line": 322,
+          "footprint": [
+            0.86,
+            1.42
+          ],
+          "height": 0.53,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.16
+          ],
+          "triangles": 44,
+          "colors": 3,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_wpn_laser",
+          "category": "wpn",
+          "params": "length = 5",
+          "paramList": [
+            {
+              "name": "length",
+              "default": "5"
+            }
+          ],
+          "line": 331,
+          "footprint": [
+            0.3,
+            5.0
+          ],
+          "height": 0.26,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 32,
+          "colors": 2,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_wpn_missile",
+          "category": "wpn",
+          "params": "paint = 0",
+          "paramList": [
+            {
+              "name": "paint",
+              "default": "0"
+            }
+          ],
+          "line": 313,
+          "footprint": [
+            0.68,
+            1.44
+          ],
+          "height": 0.28,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.09
+          ],
+          "triangles": 80,
+          "colors": 4,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_wpn_needle",
+          "category": "wpn",
+          "params": "",
+          "paramList": [],
+          "line": 308,
+          "footprint": [
+            0.32,
+            1.06
+          ],
+          "height": 0.12,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            -0.17
+          ],
+          "triangles": 12,
+          "colors": 1,
+          "warnings": 0,
+          "ok": true
+        },
+        {
+          "name": "nr_wpn_orb",
+          "category": "wpn",
+          "params": "",
+          "paramList": [],
+          "line": 300,
+          "footprint": [
+            0.48,
+            0.48
+          ],
+          "height": 0.48,
+          "zMin": 0.0,
+          "center": [
+            0.0,
+            0.0
+          ],
+          "triangles": 140,
           "colors": 2,
           "warnings": 0,
           "ok": true
