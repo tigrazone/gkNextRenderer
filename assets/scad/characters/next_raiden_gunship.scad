@@ -46,7 +46,7 @@ module bone_root()
     translate([0.74,0.10,0.46]) bone_hinge_r();
 }
 bone_root();
-anim_idle = [["bone_root","pos",[[0,[0,0,0]], [1,[0,0,0.10]], [2,[0,0,0]]]];
+anim_idle = [["bone_root","pos",[[0,[0,0,0]], [1,[0,0,0.10]], [2,[0,0,0]]]]];
 anim_deploy = [["loop",false],
     ["bone_hinge_l","rot",[[0,[0,58,0]], [0.8,[0,0,0]], [1,[0,0,0]]]],
     ["bone_hinge_r","rot",[[0,[0,-58,0]], [0.8,[0,0,0]], [1,[0,0,0]]]]];

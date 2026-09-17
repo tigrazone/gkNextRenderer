@@ -50,8 +50,8 @@ module bone_root()
 bone_root();
 anim_idle = [nr_spin("bone_rotor", 0.8)];
 anim_hover = [nr_spin("bone_rotor", 0.64),
-    ["bone_root","pos",[[0,[0,0,0]], [0.32,[0,0,0.10]], [0.64,[0,0,0]]]];
+    ["bone_root","pos",[[0,[0,0,0]], [0.32,[0,0,0.10]], [0.64,[0,0,0]]]]];
 anim_fire = [["loop",false], nr_spin("bone_rotor",0.24),
-    ["bone_chin_gun","pos",[[0,[0,0,0]], [0.06,[0,0.17,0]], [0.24,[0,0,0]]]];
+    ["bone_chin_gun","pos",[[0,[0,0,0]], [0.06,[0,0.17,0]], [0.24,[0,0,0]]]]];
 anim_bank_left = concat(nr_bank(-13), [nr_spin("bone_rotor",1)]);
 anim_bank_right = concat(nr_bank(13), [nr_spin("bone_rotor",1)]);

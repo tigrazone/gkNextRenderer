@@ -70,7 +70,7 @@ module bone_root()
     at(40) bone_outrigger_r(); at(41) bone_nose_plate_r(); at(42) bone_tail_plate_r();
 }
 bone_root();
-anim_idle = [["bone_root","pos",[[0,[0,0,0]], [1.5,[0,0,0.14]], [3,[0,0,0]]]];
+anim_idle = [["bone_root","pos",[[0,[0,0,0]], [1.5,[0,0,0.14]], [3,[0,0,0]]]]];
 anim_open = [["loop",false],
     ["bone_door_l","rot",[[0,[0,0,0]], [0.8,[0,108,0]], [1.1,[0,108,0]]]],
     ["bone_door_r","rot",[[0,[0,0,0]], [0.8,[0,-108,0]], [1.1,[0,-108,0]]]]];
