@@ -580,8 +580,9 @@ public struct FTracingDirectIlluminator<TTracer : IRayTracer, TSun : ISunShadowP
         }
 
         const float3 reflectionDirection = normalize(reflect(-context.Wo, context.Normal));
-        const float3 fresnel = BSDFFresnelSchlick(
-            max(dot(context.Normal, context.Wo), 0.0f), BSDFMaterialF0(context));
+        const float3 fresnel = BSDFFresnelConductorF82(
+            max(dot(context.Normal, context.Wo), 0.0f), BSDFMaterialF0(context),
+            context.Metalness, context.PerceptualRoughness);
         Common.FLightCell lightCell = Common.GetGlobalLightCell();
         for (uint lightSlot = 0u; lightSlot < lightCell.Count; ++lightSlot)
         {
