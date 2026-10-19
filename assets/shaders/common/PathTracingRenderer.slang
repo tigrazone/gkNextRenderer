@@ -269,7 +269,7 @@ public struct FPathTracingRenderer{
                 {
                     FBSDFEval bsdf = EvaluateSurfaceBSDF(context, reflected);
                     const float NoL = max(dot(context.Normal, reflected), 0.0f);
-                    const float mis = PowerHeuristic(proposalPdf, lightPdf);
+                    const float mis = MIS(proposalPdf, lightPdf);
                     result += FetchEmitterRadiance(reflectedHit) * bsdf.Specular *
                               (NoL * mis / proposalPdf);
                 }
@@ -286,7 +286,7 @@ public struct FPathTracingRenderer{
             {
                 FBSDFEval bsdf = EvaluateSurfaceBSDF(context, reflected);
                 const float NoL = max(dot(context.Normal, reflected), 0.0f);
-                const float mis = PowerHeuristic(proposalPdf, Common.SunSamplePdf());
+                const float mis = MIS(proposalPdf, Common.SunSamplePdf());
                 result += sunRadiance * bsdf.Specular * (NoL * mis / proposalPdf);
             }
         }

@@ -223,7 +223,7 @@ namespace Common
             }
             const float lightPdfOmega =
                 (lightPdf / sampleMeasure) * distanceSquared / lightCosine;
-            specularMis = PowerHeuristic(
+            specularMis = MIS(
                 lightPdfOmega, EvaluateGlossyProposalPdf(context, wi));
             geometryAndPdf = surfaceCosine * lightCosine * sampleMeasure /
                              (distanceSquared * lightPdf);
@@ -310,7 +310,7 @@ namespace Common
         direct.DiffuseDemodulated += sunColor * bsdf.DiffuseDemodulated * NoL * visibility;
         if (context.PerceptualRoughness > BSDF_DELTA_ROUGHNESS)
         {
-            const float specularMis = PowerHeuristic(
+            const float specularMis = MIS(
                 SunSamplePdf(), EvaluateGlossyProposalPdf(context, wi));
             direct.SpecularRadiance += sunColor * bsdf.Specular * NoL * visibility * specularMis;
         }
