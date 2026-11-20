@@ -627,9 +627,15 @@ void NextRendererGameInstance::DrawSettings(FRendererUiState& uiState)
         // Card 3: Ray Tracing Parameters
         BeginCard("##QualityRayTracingCard");
         DrawCardHeader(ICON_FA_BOLT, "Ray Tracing / Path Tracing");
-        DrawSettingCheckboxRow("Progressive Render", &userSetting.ProgressiveRender);
+        if (DrawSettingCheckboxRow("Progressive Render", &userSetting.ProgressiveRender))
+        {
+            GetEngine().ResetProgressiveRenderingAccumulation();
+        }
         ImGui::BeginDisabled(userSetting.ProgressiveRender);
-        DrawIntSetting("Samples (SPP)", &userSetting.NumberOfSamples, 1, 16);
+        if (DrawIntSetting("Samples (SPP)", &userSetting.NumberOfSamples, 1, 16))
+        {
+            GetEngine().ResetProgressiveRenderingAccumulation();
+        }
         ImGui::EndDisabled();
 
         int maxBounces = static_cast<int>(userSetting.MaxNumberOfBounces);
@@ -640,6 +646,7 @@ void NextRendererGameInstance::DrawSettings(FRendererUiState& uiState)
             {
                 userSetting.NumberOfBounces = userSetting.MaxNumberOfBounces;
             }
+            GetEngine().ResetProgressiveRenderingAccumulation();
         }
 
         int bounces = static_cast<int>(userSetting.NumberOfBounces);
@@ -647,11 +654,21 @@ void NextRendererGameInstance::DrawSettings(FRendererUiState& uiState)
         {
             userSetting.NumberOfBounces = static_cast<uint32_t>(
                 std::clamp(bounces, 1, static_cast<int>(userSetting.MaxNumberOfBounces)));
+            GetEngine().ResetProgressiveRenderingAccumulation();
         }
 
-        DrawSettingCheckboxRow("Exit After First Bounce", &userSetting.ExitAfterFirst);
-        DrawFloatSetting("Indirect Intensity", &userSetting.IndirectIntensity, 0.0f, 8.0f, "%.2fx", 0.05f);
-        DrawFloatSetting("Multi Bounce (SHARC)", &userSetting.MultiBounceIntensity, 0.0f, 4.0f, "%.2fx", 0.05f);
+        if (DrawSettingCheckboxRow("Exit After First Bounce", &userSetting.ExitAfterFirst))
+        {
+            GetEngine().ResetProgressiveRenderingAccumulation();
+        }
+        if (DrawFloatSetting("Indirect Intensity", &userSetting.IndirectIntensity, 0.0f, 8.0f, "%.2fx", 0.05f))
+        {
+            GetEngine().ResetProgressiveRenderingAccumulation();
+        }
+        if (DrawFloatSetting("Multi Bounce (SHARC)", &userSetting.MultiBounceIntensity, 0.0f, 4.0f, "%.2fx", 0.05f))
+        {
+            GetEngine().ResetProgressiveRenderingAccumulation();
+        }
         EndCard();
         break;
     }

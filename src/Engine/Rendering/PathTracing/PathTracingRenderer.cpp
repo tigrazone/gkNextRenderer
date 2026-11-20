@@ -168,6 +168,12 @@ namespace Vulkan::PathTracing
                                               currentUbo.ModelViewInverse[3][2],
                                               1.0f);
         const bool frameCounterReset = sharc_.lastFrameIndex != ~0u && frameIndex < sharc_.lastFrameIndex;
+        const bool historyReset = baseRender_.ActiveRenderView().State().resetHistory;
+        const bool bouncesChanged = sharc_.hasLastLightingState &&
+            (currentUbo.NumberOfBounces != sharc_.lastNumberOfBounces ||
+             currentUbo.MaxNumberOfBounces != sharc_.lastMaxNumberOfBounces ||
+             currentUbo.IndirectIntensity != sharc_.lastIndirectIntensity ||
+             currentUbo.MultiBounceIntensity != sharc_.lastMultiBounceIntensity);
         const bool lightingChanged = sharc_.hasLastLightingState &&
             (currentUbo.HasSun != sharc_.lastHasSun ||
              currentUbo.HasSky != sharc_.lastHasSky ||
@@ -177,7 +183,7 @@ namespace Vulkan::PathTracing
              currentUbo.SkyColor != sharc_.lastSkyColor ||
              currentUbo.SkyIntensity != sharc_.lastSkyIntensity ||
              currentUbo.SkyRotation != sharc_.lastSkyRotation);
-        if (frameCounterReset || lightingChanged)
+        if (frameCounterReset || historyReset || lightingChanged || bouncesChanged)
         {
             sharc_.pendingClear = true;
             sharc_.hasLastCameraPosition = false;
@@ -211,6 +217,10 @@ namespace Vulkan::PathTracing
         sharc_.lastSkyRotation = currentUbo.SkyRotation;
         sharc_.lastHasSun = currentUbo.HasSun;
         sharc_.lastHasSky = currentUbo.HasSky;
+        sharc_.lastNumberOfBounces = currentUbo.NumberOfBounces;
+        sharc_.lastMaxNumberOfBounces = currentUbo.MaxNumberOfBounces;
+        sharc_.lastIndirectIntensity = currentUbo.IndirectIntensity;
+        sharc_.lastMultiBounceIntensity = currentUbo.MultiBounceIntensity;
         sharc_.hasLastLightingState = true;
     }
 

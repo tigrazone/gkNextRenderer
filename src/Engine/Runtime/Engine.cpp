@@ -1433,6 +1433,11 @@ void NextEngine::SetProgressiveRendering(bool enable)
 void NextEngine::ResetProgressiveRenderingAccumulation()
 {
     progressiveRender_.accumulatedFrames = 0;
+    if (renderer_)
+    {
+        renderer_->RenderViews().InvalidateAllTemporalHistory(
+            Vulkan::EHistoryInvalidationReason::TemporalConfigChanged);
+    }
 }
 
 bool NextEngine::SetReferenceMode(const bool enabled)

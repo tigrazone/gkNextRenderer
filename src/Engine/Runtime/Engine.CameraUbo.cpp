@@ -337,6 +337,21 @@ Assets::UniformBufferObject NextEngine::GetUniformBufferObject(const VkOffset2D 
 
     // Other Setup
     renderer_->SetVisualDebugEnabled(config_.showFlags.ShowVisualDebug);
+
+    if (viewState.previousUniformBuffer.TotalFrames != 0)
+    {
+        const bool rayTracingSettingsChanged =
+            viewState.previousUniformBuffer.NumberOfBounces != ubo.NumberOfBounces ||
+            viewState.previousUniformBuffer.MaxNumberOfBounces != ubo.MaxNumberOfBounces ||
+            viewState.previousUniformBuffer.ExitAfterFirst != ubo.ExitAfterFirst ||
+            viewState.previousUniformBuffer.IndirectIntensity != ubo.IndirectIntensity ||
+            viewState.previousUniformBuffer.MultiBounceIntensity != ubo.MultiBounceIntensity;
+        if (rayTracingSettingsChanged)
+        {
+            ResetProgressiveRenderingAccumulation();
+        }
+    }
+
     // UBO Backup, for motion vector calc
     viewState.previousUniformBuffer = ubo;
 

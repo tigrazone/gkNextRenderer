@@ -353,6 +353,7 @@ void NextRendererGameInstance::DrawViewportTopBar(
                 userSetting.ProgressiveRender, ImVec2(renderModeWidth, ImGui::GetFrameHeight())))
         {
             userSetting.ProgressiveRender = !userSetting.ProgressiveRender;
+            GetEngine().ResetProgressiveRenderingAccumulation();
         }
         ImGui::SameLine();
 
@@ -370,6 +371,7 @@ void NextRendererGameInstance::DrawViewportTopBar(
                         fmt::format("{} spp/frame", samples).c_str(), selected))
                 {
                     userSetting.NumberOfSamples = samples;
+                    GetEngine().ResetProgressiveRenderingAccumulation();
                 }
                 if (selected)
                 {

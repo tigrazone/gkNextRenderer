@@ -52,6 +52,10 @@ namespace Vulkan::PathTracing
             float lastSkyRotation = 0.0f;
             uint32_t lastHasSun = 0;
             uint32_t lastHasSky = 0;
+            uint32_t lastNumberOfBounces = 0;
+            uint32_t lastMaxNumberOfBounces = 0;
+            float lastIndirectIntensity = 0.0f;
+            float lastMultiBounceIntensity = 0.0f;
             bool hasLastLightingState = false;
             bool pendingClear = false;
         };
