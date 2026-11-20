@@ -631,6 +631,24 @@ void NextRendererGameInstance::DrawSettings(FRendererUiState& uiState)
         ImGui::BeginDisabled(userSetting.ProgressiveRender);
         DrawIntSetting("Samples (SPP)", &userSetting.NumberOfSamples, 1, 16);
         ImGui::EndDisabled();
+
+        int maxBounces = static_cast<int>(userSetting.MaxNumberOfBounces);
+        if (DrawIntSetting("Max Bounces", &maxBounces, 1, 32))
+        {
+            userSetting.MaxNumberOfBounces = static_cast<uint32_t>(std::clamp(maxBounces, 1, 32));
+            if (userSetting.NumberOfBounces > userSetting.MaxNumberOfBounces)
+            {
+                userSetting.NumberOfBounces = userSetting.MaxNumberOfBounces;
+            }
+        }
+
+        int bounces = static_cast<int>(userSetting.NumberOfBounces);
+        if (DrawIntSetting("Bounces", &bounces, 1, static_cast<int>(userSetting.MaxNumberOfBounces)))
+        {
+            userSetting.NumberOfBounces = static_cast<uint32_t>(
+                std::clamp(bounces, 1, static_cast<int>(userSetting.MaxNumberOfBounces)));
+        }
+
         DrawSettingCheckboxRow("Exit After First Bounce", &userSetting.ExitAfterFirst);
         DrawFloatSetting("Indirect Intensity", &userSetting.IndirectIntensity, 0.0f, 8.0f, "%.2fx", 0.05f);
         DrawFloatSetting("Multi Bounce (SHARC)", &userSetting.MultiBounceIntensity, 0.0f, 4.0f, "%.2fx", 0.05f);
